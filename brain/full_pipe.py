@@ -47,9 +47,10 @@ def main():
         if results:
             st.write("### Summary of Search Results:")
             for i, result in enumerate(results, 1):
-                st.markdown(f"*Result {i}:*")
-                st.write(result)
+                with st.expander(f"# Result {i}"):
+                    st.write(result)
 
+            # Save the summaries to a markdown file
             with open('searchResults/summary.md', 'w') as f:
                 for result in results:
                     f.write(result + "\n")

@@ -1,5 +1,3 @@
-Here is the content in Markdown format:
-
 # **Search GPT**
 
 A tool for summarizing search results and website content using FAISS, LLMs, and the Retrieval-Augmented Generation (RAG) technique.

@@ -6,6 +6,13 @@ A tool for summarizing search results and website content using FAISS, LLMs, and
 
 Search GPT is a Streamlit-based application that automates the process of scraping Google search results, extracting content from websites, storing and retrieving information using FAISS (Facebook AI Similarity Search), and summarizing the content using a language model. This tool leverages the Retrieval-Augmented Generation (RAG) technique to provide concise and easy-to-understand summaries of web content based on user queries.
 
+## **Demo**
+
+
+https://github.com/user-attachments/assets/141db33d-22c0-41a7-a546-fe8fe01f717b
+
+
+
 ## **Features**
 
 - **Google Search Scraping**: Automatically scrapes Google search results for a given query.

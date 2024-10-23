@@ -2,7 +2,7 @@ from groq import Groq
 from secrets22 import GROQ_API
 import json
 
-with open('searchResults/scraped_data.json', 'r') as f:
+with open('../searchResults/scraped_data.json', 'r') as f:
     results = json.load(f)
 
 def generate_summary(results, query, index):

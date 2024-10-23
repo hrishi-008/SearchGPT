@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import google_search_results as gsr
 import scrape_websites as scraper
 import summarise as summ
@@ -23,9 +24,14 @@ class SearchGpt:
             summary = self.summariser.generate_summary(doc.page_content, self.query, self.index)
             self.results.append(summary)
             self.index += 1
+        with open('searchResults/summary.md', 'w') as f:
+                    for result in self.results:
+                        f.write(result + "\n")
         return self.results
+    
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/search', methods=['POST'])
 def search():
@@ -35,4 +41,4 @@ def search():
     return jsonify(results)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

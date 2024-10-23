@@ -3,3 +3,7 @@ testing/
 scrap/
 UI/
 .env
+node_modules/
+react-ui/
+package-lock.json
+package.json
